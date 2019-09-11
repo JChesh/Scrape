@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>NPR News</title>
+  <script src="https://code.jquery.com/jquery.js"></script>
+  {{!-- Bootstrap --}}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+  {{!-- Header --}}
+  <div id="header">
+    <br>
+    <h1>Get Your News</h1>
+    <a class="homelink" href="/">Home</a>
+    |
+    <a class="savedlink" href="/saved"> Saved Articles</a>
+    <br>
+    <br>
+    <form action="/api/scrape" method="POST" id="scrapeForm"></form>
+    <form action="/api/articles/delall" method="POST" id="deleteForm"></form>
+    <button type="submit" form="scrapeForm" class="btn btn-danger scrapebtn">Scrape</button>
+    <button type="submit" form="deleteForm" class="btn btn-danger clearbtn">Clear Articles</button>
+    <br>
+    <br>
+  </div>
+  {{{body}}}
+  {{!-- Footer --}}
+  <div id="footer">
+    <br>
+    <br>
+  </div>
+</body>
+
+</html>
+
+
+{{!-- Javascript --}}
+<script type="text/javascript">
+
+</script>
